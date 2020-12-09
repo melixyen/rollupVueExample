@@ -1,0 +1,290 @@
+
+// All App Mixins
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+@mixin useGPU() {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@mixin noFlicker() {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+@mixin noTextSelect(){
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@mixin textStyle(
+  $size,
+  $style: null,
+  $weight: null,
+  $color: null,
+  $line-height: null,
+  $decoration: null,
+  $align: null,
+  $transform: null
+) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  text-decoration: $decoration;
+  text-transform: $transform;
+  text-align: $align;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin textShadow($value1, $value2, $value3, $color){
+  text-shadow: $value1 $value2 $value3 $color;
+}
+
+@mixin textGradient($gradient1, $gradient2){
+  background-image: linear-gradient(to bottom, $gradient1 60%, $gradient2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin bgGradient($direction, $color1, $color2) {
+  //background-color: $color1;
+  background: -moz-linear-gradient($direction, $color1 0, $color2 100%);
+  background: -o-linear-gradient($direction, $color1 0, $color2 100%);
+  background: -ms-linear-gradient($direction, $color1 0, $color2 100%);
+  background: linear-gradient($direction, $color1 0, $color2 100%);
+  background: -webkit-linear-gradient($direction, $color1 0, $color2 100%);
+}
+
+@mixin addBevel($color1: null, $color2: null) {
+  border: 1px solid #000000;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.3), inset -1px -1px rgba(0, 0, 0, 0.3);
+}
+
+@mixin addTopBevel(){
+  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.2), inset -2px -2px rgba(0, 0, 0, 0.2);
+}
+
+@mixin bgImage($src, $height, $width, $type) {
+  background: url($src) no-repeat;
+  display: inline-block;
+  height: $height;
+  width: $width;
+  background-size: $type;
+  vertical-align: middle;
+}
+
+@mixin clearShadow() {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+@mixin dropDownShadow() {
+  -webkit-box-shadow: 0 0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: 0 0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+}
+
+@mixin dropUpShadow() {
+  -webkit-box-shadow: 0 -0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 -0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: 0 -0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 -0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -0.166rem 0.25rem 0.083rem rgba(0, 0, 0, 0.6);
+}
+
+@mixin dropLeftShadow() {
+  -webkit-box-shadow: -0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: -0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -o-box-shadow: -0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  box-shadow: -0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+}
+
+@mixin dropRightShadow() {
+  -webkit-box-shadow: 0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: 0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  -o-box-shadow: 0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0.083rem 0 0.416rem 0.166rem rgba(0, 0, 0, 0.75);
+}
+
+@mixin customShadow($val1, $val2, $val3, $val4, $color) {
+  -webkit-box-shadow: $val1 $val2 $val3 $val4 $color;
+  -moz-box-shadow: $val1 $val2 $val3 $val4 $color;
+  -ms-box-shadow: $val1 $val2 $val3 $val4 $color;
+  -o-box-shadow: $val1 $val2 $val3 $val4 $color;
+  box-shadow: $val1 $val2 $val3 $val4 $color;
+}
+
+@mixin customInsetShadow($val1, $val2, $val3, $val4, $color) {
+  -webkit-box-shadow: inset $val1 $val2 $val3 $val4 $color;
+  -moz-box-shadow: inset $val1 $val2 $val3 $val4 $color;
+  -ms-box-shadow: inset $val1 $val2 $val3 $val4 $color;
+  -o-box-shadow: inset $val1 $val2 $val3 $val4 $color;
+  box-shadow: inset $val1 $val2 $val3 $val4 $color;
+}
+
+@mixin perspective($value){
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  -ms-perspective: $value;
+  -o-perspective: $value;
+  perspective: $value;
+}
+
+@mixin backfaceVisibility($value){
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+@mixin transition($property, $duration, $timing-function, $delay: null) {
+  -webkit-transition: $property $duration $timing-function, $delay;
+  -moz-transition: $property $duration $timing-function, $delay;
+  -ms-transition: $property $duration $timing-function, $delay;
+  -o-transition: $property $duration $timing-function, $delay;
+  transition: $property $duration $timing-function, $delay;
+}
+
+@mixin translateX($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -o-transform: translateY($value);
+  transform: translateY($value);
+}
+
+@mixin translateZ($value) {
+  -webkit-transform: translateZ($value);
+  -moz-transform: translateZ($value);
+  -ms-transform: translateZ($value);
+  -o-transform: translateZ($value);
+  transform: translateZ($value);
+}
+
+@mixin translate3d($valueX, $valueY, $valueZ){
+  -webkit-transform: translate3d($valueX, $valueY, $valueZ);
+  -moz-transform: translate3d($valueX, $valueY, $valueZ);
+  -ms-transform: translate3d($valueX, $valueY, $valueZ);
+  -o-transform: translate3d($valueX, $valueY, $valueZ);
+  transform: translate3d($valueX, $valueY, $valueZ);
+}
+
+@mixin transformStyle($value){
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -ms-transform-style: $value;
+  -o-transform-style: $value;
+  transform-style: $value;
+}
+
+@mixin transformOrigin($value1, $value2) {
+  -webkit-transform-origin: $value1 $value2;
+  -moz-transform-origin: $value1 $value2;
+  -ms-transform-origin: $value1 $value2;
+  -o-transform-origin: $value1 $value2;
+  transform-origin: $value1 $value2;
+}
+
+@mixin transformRotate($value) {
+  -webkit-transform: rotate($value);
+  -moz-transform: rotate($value);
+  -ms-transform: rotate($value);
+  -o-transform: rotate($value);
+  transform: rotate($value);
+}
+
+@mixin transformRotateX($value) {
+  -webkit-transform: rotateX($value);
+  -moz-transform: rotateX($value);
+  -ms-transform: rotateX($value);
+  -o-transform: rotateX($value);
+  transform: rotateX($value);
+}
+
+@mixin transformScale($value) {
+  -webkit-transform: scale($value);
+  -moz-transform: scale($value);
+  -ms-transform: scale($value);
+  -o-transform: scale($value);
+  transform: scale($value);
+}
+
+@mixin responsive($type, $value) {
+  @if $type == "min" {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else if $type == "max" {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}
+
+// NORMAL STYLES
+@mixin setPosition($pos, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin lobbyPStyle() {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  text-align: left;
+  color: $color-gray-lighter;
+}
+
+@mixin domSize ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexCenter () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//****** TAMBOLA *******/
+@mixin tblSetDivBefore($br-radius, $top, $right, $bottom, $left, $bg: null, $bg-color: null, $bg-image: null){
+  content: '';
+  box-sizing: border-box;
+  z-index: -1;
+  border-radius: $br-radius;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  background: $bg;
+  background-color: $bg-color;
+  background-image: $bg-image;
+}

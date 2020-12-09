@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover, user-scalable=no">
+<meta http-equiv=”Pragma” content=”no-cache”>
+<title>Rollup package UI Component Book</title>
+
+<style>
+	body {
+		font-size: 12px;
+		color: #7f7f7f;
+	}
+
+	.frameA {
+		border-bottom: 2px solid #7c7c7c;
+		margin: 15px 0 5px;
+		padding: 5px 0;
+	}
+</style>
+<link rel="stylesheet" href="assets/css/lui.css"></link>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="lui.js"></script>
+<script>
+	var BB = {}
+	var setting = {}
+	var process = {
+		env: {}
+	}
+
+	function initA(){
+		BB.main = new Vue({
+			el: '#app',
+			template: `
+				<div id="app">
+					<div>Alert and Confirm</div>
+					<puk gap="Hello" :time="now()"></puk>
+					<div class="frameA">
+						<h2>Alert</h2>
+						<button v-for="ca in alertInfoText" @click="alertTest(ca)">{{ca.tx}}</button>
+					</div>
+					<div class="frameA">
+						<h2>Confirm Popup</h2>
+						<button v-for="ca in confirmInfoText" @click="confirmTest(ca)">{{ca.tx}}</button>
+					</div>
+					<div class="frameA">
+						<button @click="printTime()">取得現在時間</button>
+						<lui-puk :gap="timeGap" :time="timeObj"></lui-puk>
+					</div>
+				</div>
+			`,
+			data: {
+				test: true,
+				alertInfoText: [ {tx:'Warning', type: 'warn'}, {tx:'Information', type: 'info'}, {tx:'Success', type: 'success'}, {tx:'Error', type: 'error'} ],
+				confirmInfoText: [
+					{tx:'System', title: 'System', content: 'System detect your account is a joke.', isQ: false},
+					{tx:'Ask', title: 'Question', content: 'Are you a boy ?', isQ: true}
+				],
+				timeGap: '本機',
+				timeObj: new Date()
+			},
+			methods: {
+				alertTest: function(pop){
+					this.$alert({msg:pop.tx, type:pop.type, duration: 5000})
+				},
+				confirmTest: function(cfm){
+					this.$popup({title:cfm.title, content:cfm.content, boolean: cfm.isQ}).then((e)=>{
+						if(cfm.content=='Are you a boy ?'){
+							if(e=='yes'){
+								this.$alert('What ? really a boy ? noooooooooo!');
+							}else if(e=='no'){
+								this.$alert('HahAHahAHA , women !');
+							}
+						}
+					})
+				},
+				now: function(){
+					return new Date();
+				},
+				printTime: function(){
+					this.timeObj = new Date();
+				}
+			}
+		})
+	}
+</script>
+</head>
+
+<body onload="initA()">
+	<div id="app"></div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+//Crop Photo Overrides
+.upload-demo .upload-demo-wrap,
+.upload-demo .upload-result,
+.upload-demo.ready .upload-msg {
+  display: none;
+}
+
+.upload-demo.ready .upload-demo-wrap {
+  display: block;
+}
+
+.upload-demo.ready .upload-result {
+  display: inline-block;
+}
+
+.upload-demo-wrap {
+  height: 28rem;
+  margin: 0 auto;
+}
+
+//Slider Overrides
+.slider-handle {
+  //@include bgImage('../../assets/onepokerapp/insuranceKnob.png', 1.75rem, 1.75rem, contain);
+}
+
+.slider.slider-horizontal {
+  width: 100% !important;
+  height: 1.5rem;
+}
+
+.slider.slider-horizontal .slider-track {
+  height: 0.375rem !important;
+  margin-top: -0.125rem !important;
+}
+
+.slider.slider-horizontal .slider-selection {
+  background: $primary-color !important;
+}
+
+.slider.slider-horizontal .slider-track-low,
+.slider.slider-horizontal .slider-track-high {
+  background: $color-gray !important;
+}
+
+.slider.slider-horizontal .slider-tick,
+.slider.slider-horizontal .slider-handle {
+  margin-left: -0.875rem;
+}
+
+.history-controls-slider .slider {
+  display: block !important;
+  width: 87%;
+  background-color: transparent;
+  margin: auto;
+}
+
+.history-controls-slider .slider.slider-horizontal {
+  width: 87% !important;
+  height: 3rem;
+}
+
+.history-controls-slider .slider.slider-horizontal .slider-handle {
+  margin-top: 0.75rem;
+}
+
+//NotifyJS
+.notifyjs-corner {
+  top: 5px;
+  width: 90% !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  z-index: 99999 !important;
+  position: absolute;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+  width: 100% !important;
+}
+
+
+/* NotifyJS Overrides */
+.notifyjs-bootstrap-base {
+  background-position: 10px 8px !important;
+  border-radius: 18px !important;
+  padding: 4px 0;
+  padding-left: 0.5rem !important;
+  border: 0 !important;
+  text-shadow: none !important;
+  display: flex;
+  font-family: "Ubuntu", Helvetica, 'Arial' !important;
+  @include dropDownShadow();
+
+  .notifyjs-arrow {
+    width: 20px;
+    height: 20px;
+    padding-right: 2rem;
+    background-repeat: no-repeat;
+  }
+}
+
+.notifyjs-bootstrap-info {
+  background-color: #58b8ef !important;
+  color: #00192d !important;
+}
+
+.notifyjs-bootstrap-warn {
+  background-color: #f1c78a !important;
+  color: #6a4600 !important;
+  .notifyjs-arrow {
+    background-image: url(../../assets/alert_icons/warn_icon.jpg);
+  }
+}
+
+.notifyjs-bootstrap-success {
+  background-color: #79d277 !important;
+  color: #006702 !important;
+
+  .notifyjs-arrow {
+    background-image: url(../../assets/alert_icons/success_icon.jpg);
+  }
+}
+
+.notifyjs-bootstrap-error {
+  background-color: #ef8282 !important;
+  color: #7b0200 !important;
+
+
+  .notifyjs-arrow {
+    background-image: url(../../assets/alert_icons/error_icon.jpg);
+  }
+}
+
+//Toggle
+.toggle {
+  height: 2em !important;
+  width: 3.5em !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+}
+
+//Accordion
+.panel-body {
+  border: 0 !important;
+}
+
+//Sliderlens
+.cc-insurance-slider {
+
+  .sliderlens.fixed {
+    background-color: $primary-bg-color !important;
+  }
+
+  .sliderlens svg > path {
+    stroke: $secondary-color-dark-rgba !important;
+  }
+
+  .sliderlens svg > g > text {
+    fill: $secondary-color-rgba !important;
+    font-size: 0.7rem !important;
+  }
+
+  .slider-container .sliderlens {
+    width: 100% !important;
+    height: 3.25rem !important;
+  }
+
+  .slider.slider-horizontal {
+    .slider-track-low, .slider-track-high {
+      background-color: $color-gray-lightest !important;
+    }
+  }
+}

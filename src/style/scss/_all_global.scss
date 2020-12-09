@@ -1,0 +1,188 @@
+
+.no-flick {
+  @include noFlicker();
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+// Core Pages Styles
+.core-pages-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  @include useGPU();
+  @extend %reset;
+  overflow: hidden;
+}
+
+.hrLine-or {
+  color: $color-gray-lighter;
+}
+
+.cc-credits {
+  width: 100%;
+  @include setPosition(absolute, $bottom: 1rem);
+  @include textStyle(.75rem, $color: $color-gray-lightest, $align: center);
+}
+
+.field-input-area {
+  width: 97%;
+  position: relative;
+  margin: 0.75rem auto;
+
+  // Icons
+  .icon-user2, .icon-lock2, .icon-mail2, .icon-quote, .icon-shield, .icon-mobile {
+    font-size: 1.25rem;
+    color: $color-gray-lightest;
+    @include setPosition(absolute, $top: 0.875rem, $left: 1.25rem);
+  }
+
+  .icon-cross2 {
+    font-size: 1rem;
+    color: $color-gray-lighter;
+    @include setPosition(absolute, $top: 1rem, $right: 1.25rem);
+    display: none;
+  }
+
+  &.disable-field {
+    .icon-cross2 {
+      display: none;
+    }
+
+    .icon-user2, .icon-lock2, .icon-mail2, .icon-quote, .icon-shield, .icon-mobile {
+      color: $color-gray;
+    }
+  }
+}
+
+// Carousel Styles
+.carousel-indicators {
+  bottom: -0.5rem;
+
+  li {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0;
+    background-color: $color-gray-lightest;
+    opacity: 0.8;
+    margin: 0;
+
+    &.active {
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.right.carousel-control, .left.carousel-control {
+  opacity: 0.01;
+}
+
+.carousel-inner {
+  height: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+// All Pages Styles
+.cc-pages-container {
+  margin: 0;
+  padding: 84px 0 0 0;
+  height: 100%;
+  @include bgGradient(top, $primary-bg-color, darken($primary-bg-color, 5%));
+  overflow: hidden;
+
+  &.no-padding-top {
+    padding: 0;
+  }
+}
+
+.lobby-overlay {
+  @include setPosition(absolute, $top: 0, $left: 0);
+  @extend %fullHeightWidth;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 10;
+}
+
+.popup-modal-div {
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+
+
+  .icon-tick2, .icon-info2 {
+    position: relative;
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 4rem;
+  }
+
+  .icon-tick2 {
+    color: $positive-value;
+  }
+
+  .icon-info2 {
+    color: $negative-value;
+  }
+
+  .modal-text {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    @include textStyle(1.125rem, $color: $primary-text-color, $align: center);
+  }
+}
+
+.marquee {
+  @include setPosition(absolute, $top: 64px, $left: 0, $right: 0);
+  height: 20px;
+  display: none;
+  overflow: hidden;
+  width: 95%;
+  margin: auto;
+  border: none;
+  background-color: #212121;
+  color: lightgreen;
+  z-index: 999;
+
+  div {
+    @include textStyle(12px, $line-height: 20px);
+  }
+}
+
+.gamescreen .marquee {
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.8);
+  @include setPosition(absolute, $top: 0, $left: auto, $right: 0);
+}
+
+.browser-ipad.gamescreen .marquee,
+.real-ipad.gamescreen .marquee {
+  width: 80%;
+}
+
+.opk-page-header {
+  width: 95%;
+  margin: 0 auto;
+  background-color: $third-bg-color;
+  border-radius: 0 0 $br-value $br-value;
+
+  h4 {
+    @include textStyle(1.25rem, $color: $primary-color, $align: center);
+    padding: 1rem 0;
+  }
+}

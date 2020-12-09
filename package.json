@@ -1,0 +1,29 @@
+{
+  "name": "lui",
+  "version": "0.0.1",
+  "description": "Rollup gulp build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "rollup --config rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melixyen/rollupVueExample.git"
+  },
+  "author": "Melix",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "gulp": "^4.0.2",
+    "gulp-rollup": "^2.17.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-css-only": "^3.0.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.0.3"
+  }
+}

@@ -1,0 +1,263 @@
+// Eden Poker Variables
+
+// ----- Heading Colors -----
+$primary-color:         	#06abeb;   //light blue
+$primary-color-dark:    	#068dc1;   //light purple
+$secondary-color:       	#7173e2; //#2f2852;   //purple blue
+$secondary-color-dark:  	#5758ab;   //dark purple blue
+
+$primary-color-rgba: rgba(6, 171, 235, 1);
+$primary-color-dark-rgba: rgba(6, 141, 193, 1);
+$secondary-color-rgba: rgba(113, 115, 226, 1);
+$secondary-color-dark-rgba: rgba(87, 88, 171, 1);
+
+// ----- Background Colors -----
+$primary-bg-color:			#0a0a16;   //teal
+$secondary-bg-color:       	#14162b;   //dark navy
+$third-bg-color:       	    #333;   //gray
+$fourth-bg-color: 			#1d2327;   //dark teal
+
+// ----- Button Colors -----
+$primary-btn-color:			#06abeb;   //light blue
+$primary-btn-color-dark:	#7173e2;   //light purple
+$primary-btn-text-color: 	#ffffff;   //white
+
+$secondary-btn-color:     	#fcf8eb;   //white
+$secondary-btn-color-dark:	#e5e0cf;   //light gray
+$secondary-btn-text-color:	#111111;   //black
+
+// ----- Text Colors -----
+$primary-text-color:		#ffffff;   //beige white
+$secondary-text-color:		#05aaea;   //light blue
+$third-text-color:          #ffffff;
+
+//------------------------------OPK------------------------------//
+//OPK BACKGROUND
+$opk-main-bg-color:			        #080812;
+$opk-pages-main-bg-color:           #14162b;
+$opk-gamelist-bg-color:             #080812;
+//OPK HEADER
+$opk-header-color1:                 #0d293f;
+$opk-header-color2:                 #1d163f;
+$opk-title-color:                   #06abeb;
+$opk-titlebar-color:                #0b0d1a;
+$opk-marquee-bg-color:              #14162b;
+//OPK NAVBAR
+$opk-navbar-color:                  #6779e5;
+$opk-navbar-color-dark:             #2c2d5d;
+$opk-topnav-bg-color1:              #1b1f38;
+$opk-topnav-bg-color2:              #0c293b;
+$opk-nav-text-color:                #ffffff;
+$opk-nav-active-text-color:         #ffffff;
+//OPK INPUTS
+$opk-input-color:                   #0f1022;
+$opk-input-text-color:              #ffffff;
+$opk-input-active-text-color:       #ffffff;
+//OPK SUBNAV
+$opk-subheader-color1:              #303265;
+$opk-subheader-color2:              #104267;
+$opk-subheader-text-color:          #06abeb;
+$opk-contentbox-color:              #0f1225;
+$opk-selected-color:                #181c39;
+$opk-selected-color-dark:           #0e0d1d;
+$opk-subnav-text-color:             #ffffff;
+$opk-subnav-active-text-color:      #ffffff;
+//OPK TABLES
+$opk-table-color-odd:   	        #121327;
+$opk-table-color-even:   	        #0e0d1d;
+$opk-tables-th-color:               #ffffff;
+$opk-tables-td-color:               #ffffff;
+$opk-tables-num-color:              #15a5bf;
+//OPK BADGES/ HIGHLIGHT
+$opk-badge-bg-color:                #433b77;
+$opk-badge-text-color:              #ffffff;
+$opk-turbo-bg-color:                #15a5bf;
+$opk-highlight-color:               #01ffc8;
+$opk-refresh-btn-color:             #999ff7;
+$opk-back-btn-color:                #ffffff;
+//OPK BUTTONS
+$opk-btn-bg-color:                  #181b2a;
+$opk-buttons-text-color:            #ffffff;
+$opk-buttons-active-text-color:     #ffffff;
+//OPK SIDEBAR
+$opk-sidebar-bg-color:              #0c0e1d;
+$opk-sidebar-refresh-color:         #999ff7;
+//OPK QUICKSEAT
+$opk-qs-title-color:                #ffffff;
+$opk-qs-text-color:                 #ffffff;
+$opk-qs-active-text-color:          #ffffff;
+$opk-qs-btn-text-color:             #ffffff;
+$opk-qs-header-color1:              #303265;
+$opk-qs-header-color2:              #104267;
+$opk-qs-header-text-color:          #ffffff;
+$opk-qs-btn-img-filter:             invert(0);
+//OPK TOURNEY
+$opk-tourney-btn-text-color:        #000000;
+//OPK STATEMENT
+$opk-statement-2nd-th-color:        #554e40;
+$opk-statement-2nd-th-text-color:   #181818;
+$opk-statement-2nd-td-color:        #5a5a5a;
+$opk-statement-2nd-line-color:      #47424c;
+$opk-statement-line-color:          #292929;
+$opk-statement-total-color:         #151515;
+$opk-statement-empty-color:         #252525;
+$opk-statement-detail-bg-color:     #111111;
+$opk-statement-self-color:          #ffcc00;
+$opk-statement-inner-thead-tr:      #554e40;
+$opk-statement-inner-tbody-tr:      #121327;
+$opk-statement-inner-tbody-border:  #47424c;
+$opk-statement-inner-tbody-header1: #303265;
+$opk-statement-inner-tbody-header2: #104267;
+$opk-statement-inner-tbody-h6:      $primary-color;
+$opk-statement-inner-tbody-p:       #dddddd;
+$opk-statement-inner-tbody-self-bg: #181c39;
+$opk-statement-inner-tbody-self-h6: #ffcc00;
+$opk-statement-inner-tbody-mark:    $primary-color;
+
+//OPK SIDE PROFILE
+$opk-side-profile-welcome-color:    #eeeeee;
+$opk-side-profile-name-color:       #eeeeee;
+$opk-side-profile-type-color:       #01ffc8;
+$opk-side-profile-data-color:       #06acea;
+$opk-side-profile-title-color:      #ffffff;
+$opk-side-profile-lb-title-color:   #8ebdf3;
+$opk-side-profile-glow-line-color:  #8ebdf3;
+$opk-side-profile-glow-color:       rgba(142, 189, 243, 0.9);
+$opk-side-profile-lb-text-color:    #bbbbbb;
+//OPK SCROLL BAR
+$opk-scrollbar-thumb-color:         #181c39;
+$opk-scrollbar-thumb-hover-color:   $primary-color;
+$opk-scrollbar-thumb-active-color:  $primary-color;
+$opk-scrollbar-track-color:         #0c0e1d;
+$opk-scrollbar-track-hover-color:   #0e0d1d;
+$opk-scrollbar-track-active-color:  #0e0d1d;
+$opk-scrollbar-corner-color:        transparent;
+//OPK SETTINGS
+$opk-settingslist-text-color:       #dddddd;
+$opk-raise-sets-text-color:         #dddddd;
+$opk-raise-sets-active-text-color:  #ffffff;
+$opk-raise-sets-active-bot-color:   #dddddd;
+//OPK DOWNLOAD BAR
+$opk-download-bar-bg-color:        rgba(0, 0, 0, 0.5);
+$opk-download-bar-color1:          rgba(13,41,63,0.8);
+$opk-download-bar-color2:          rgba(29,22,63,0.8);
+//OPK STORE
+$opk-store-bg-color1:              rgba(6, 171, 235, 0.1);
+$opk-store-bg-color2:              rgba(113, 115, 226, 0.1);
+//OPK APP COLORS
+$opk-app-username-color:           $primary-color;
+$opk-app-page-title-color:         $primary-color;
+//OPK LEADERBOARD
+$opk-lb-table-1st-bg-color1:          #b88d08;
+$opk-lb-table-1st-bg-color2:          #b08007;
+$opk-lb-table-2nd-bg-color1:          #c5c5c5;
+$opk-lb-table-2nd-bg-color2:          #8f8f8f;
+$opk-lb-table-3rd-bg-color1:          #98845f;
+$opk-lb-table-3rd-bg-color2:          #564930;
+$opk-lb-table-num-bg-color:           #110e21;
+$opk-lb-table-num-text-color:         #FFFFFF;
+$opk-lb-table-text-color:             #FFFFFF;
+//OPK T&C
+$opk-tnc-text-color:                  #dddddd;
+$opk-tnc-bold-color:                  #ffffff;
+//OPK TOURNEY EVENT
+$opk-tourney-refresh-btn-color:       #ffffff;
+$opk-tourney-refresh-btn-bg:          $primary-color;
+$opk-tourney-tabs-btn-bg:             #181c39;
+$opk-tourney-tabs-btn-text:           #666666;
+$opk-tourney-tabs-btn-active-bg1:     $primary-color;
+$opk-tourney-tabs-btn-active-bg2:     $secondary-color;
+$opk-tourney-tabs-btn-active-text:    #ffffff;
+$opk-tourney-badge-bg:                #2c2d5d;
+$opk-tourney-badge-text:              #cccccc;
+
+/************ GAME ************/
+$opk-game-buyin-table-bg:             rgba(0, 0, 0, 0.3);
+$opk-game-buyin-table-first-bg:       rgba(0, 0, 0, 0.5);
+$opk-game-buyin-table-text:           $primary-text-color;
+
+// ----- Flat Colors -----
+$color-black:				#000000;   //black
+$color-gray-darkest:		#111111;   //darkest gray
+$color-gray-darker:			#222222;   //darker gray
+$color-gray-dark:			#444444;   //dark gray
+$color-gray:				#666666;   //gray
+$color-gray-light:			#888888;   //light gray
+$color-gray-lighter:		#aaaaaa;   //lighter gray
+$color-gray-lightest:		#dddddd;   //lightest gray
+$color-white:				#ffffff;   //white
+
+// ----- Value Colors -----
+$positive-value:        	#8bec44;   //green
+$negative-value:        	#ff4a4a;   //red
+$neutral-value:				#dddddd;   //light gray
+
+// ----- Others -----
+$club-chip-color: 			#fb851d;   //orange
+$game-chip-color:			#f00c10;   //red
+$game-gem-color:			#ff2970;   //pink-red
+$tourney-chip-color:		orange;    //orange
+$briefcase-color:			#9d5100;   //brown
+
+// ----- Border Radius -----
+$br-value: 8px;
+$gradient-angle: left;
+
+//****** TAMBOLA COLOURS *******/
+//General colours
+$tbl-primary-red: #cd2d00;
+$tbl-primary-dark-red: #470000;
+$tbl-sec-red:#610015;
+
+$tbl-primary-yellow: #ffca00;
+$tbl-primary-dark-yellow: #7b5c25;
+
+$tbl-room-text-color: #ffba00;
+$tbl-header-text-color: #fff4c1;
+$tbl-text-color: #d7d7d7;
+
+$tbl-lighter-gold:#f5d77f;
+$tbl-light-gold:#e1ba60;
+$tbl-gold:#c6952b;
+$tbl-dark-gold:#836538;
+$tbl-darker-gold:#362404;
+
+$tbl-gradient-gold-1:#ffffd7;
+$tbl-gradient-gold-2:#fce692;
+$tbl-gradient-gold-3:#ffca00;
+$tbl-gradient-gold-4:#fe9a00;
+$tbl-gradient-gold-5:#b07515;
+$tbl-gradient-gold-6:#725a00;
+
+$first-place-color: #ffca00;
+$second-place-color: #bbbbbb;
+$third-place-color: #e25d2f;
+
+//Tambola Header
+$tbl-header-bg: rgba(205, 45, 0, 1);
+$tbl-header-dark-bg: rgba(77, 0, 0, 1);
+
+//Lobby Rooms
+$tbl-RoomA: #b41f42;
+$tbl-RoomB: #139077;
+$tbl-RoomC: #b84100;
+$tbl-RoomD: #4026a0;
+$tbl-RoomE: #024496;
+
+$tbl-lobby-icon: #daa832;
+$tbl-lobby-icon-dark: #9c4f20;
+
+$tbl-addroom-color: #ca811b;
+$tbl-addroom-dark-color: #513206;
+
+//In-game
+$tbl-quickbuy-bg: #edb421;
+$tbl-quickbuy-dark-bg: #814c04;
+$tbl-ticket-color: #6b2700;
+
+$tbl-default-bg: rgb(255, 193, 58);
+$tbl-default-dark-bg: rgb(123, 92, 37);
+$tbl-leftball1-bg: rgb(212, 0, 0);
+$tbl-leftball1-dark-bg: rgb(124, 0, 0);
+$tbl-leftball2-bg: rgb(236, 78, 0);
+$tbl-leftball2-dark-bg: rgb(145, 48, 0);
