@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "rollup --config rollup.config.js"
+    "watch": "rollup -f umd --config rollup.config.js --watch -o dist/lui.js",
+    "pack": "rollup --config rollup.config.js",
+    "es": "rollup -f es --config rollup.config.js -o dist/lui.esm.js"
   },
   "repository": {
     "type": "git",

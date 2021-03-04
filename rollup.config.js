@@ -19,6 +19,17 @@ var config = {
 	]
 }
 
+// ****** Custom control export config rule start ******
+var options = process.argv;//Get cli parameter 取得執行命令帶的參數
+var format = 'umd';
+options.forEach(function(c, idx, arr){
+	if(c=='-f' || c=='--output.format'){
+		format = arr[idx+1];
+	}
+});
+
+config.output.format = format;
+
 
 
 export default config;

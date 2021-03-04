@@ -1,4 +1,14 @@
-/************ GAME ************/
+.puk_span {
+  font-size: 18px;
+}
+.div1 {
+  color: #0000ff;
+}
+.div1 .div2 {
+  color: #ff0000;
+}
+
+/*# sourceMappingURL=puk.vue.map *//************ GAME ************/
 .popupWarpper .popupMain .header {
   border-bottom: 0.083rem solid #444444;
 }
@@ -134,17 +144,7 @@
   color: #333333;
 }
 
-/*# sourceMappingURL=popupOption.vue.map */.puk_span {
-  font-size: 18px;
-}
-.div1 {
-  color: #0000ff;
-}
-.div1 .div2 {
-  color: #ff0000;
-}
-
-/*# sourceMappingURL=puk.vue.map *//************ GAME ************/
+/*# sourceMappingURL=popupOption.vue.map *//************ GAME ************/
 .upload-demo .upload-demo-wrap,
 .upload-demo .upload-result,
 .upload-demo.ready .upload-msg {
